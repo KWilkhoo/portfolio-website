@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--meta tags for character set-->
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head>
+  <!--meta tags for character set-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!--page title shown in browser tab-->
-        <title>About Me - Kamaljot Wilkhoo</title>
+  <!--page title shown in browser tab-->
+  <title>About Me - Kamaljot Wilkhoo</title>
 
-        <!--link to external css file for studying-->
-        <link rel="stylesheet" href="css/style.css"/>
+  <!--adding font-->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
-    </head>
+  <!--link to external css file for studying-->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--Insert navigation bar with links to other pages-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <body>
-       <!--Insert navigation bar with links to other pages-->
-       <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <!--main content of the About page-->
-    <main>
-        <h1>About Me</h1>
+  <!--main content of the About page-->
+  <main class="about-main">
+    <h1>About Me</h1>
 
-        <!--bio paragraph with my description-->
-        Allo! My name is Kamaljot Wilkhoo and I am an Information Technology student at York University. I'm intrigued by large-scale, trending, and high-impact products in the tech world, especially those that solve real problems and improve user experiences.
-                I enjoy learning about cloud computing and emerging technologies. Currently, I'm building my skills through projects and coursework, aiming to contribute to innovative tech solutions in the future.
-            When I'm not into coding, I love exploring new food spots and diving into K-pop culture.  </p>
-           
-        <!--education details-->
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor of Arts in Information Technology - York University</li>
-        </ul>
+    <!--bio paragraph with my description-->
+    <p>
+      I enjoy learning about cloud computing and emerging technologies. Currently, I'm building my skills through projects and coursework, aiming to contribute to innovative tech solutions in the future.
+      When I'm not into coding, I love exploring new food spots and diving into K-pop culture.
+    </p>
 
-        <!--skills details-->
-        <h2>Skills</h2>
-        <ul>
-            <li>Basic HTML, CSS</li>
-            <li>Basic AI Concepts</li>
-            <li>Presentation Design</li>
-            <li>Web Browsing & Research (Chrome,Edge)</li>
-        </ul>
+    <!--education details-->
+    <h2>Education</h2>
+    <ul class="flower-list">
+      <li>Bachelor of Arts in Information Technology - York University</li>
+    </ul>
 
-        <!--personal or professional interests-->
-        <h2>Interests</h2>
-        <ul>
-            <li>Exploring new technology trends</li>
-            <li>K-pop</li>
-            <li>Trying out new food spots🍜</li>
-        </ul>
-    </main>
-        <!--footer that appears at the bottom of every page-->
-    <footer>
+    <!--skills details-->
+    <h2>Skills</h2>
+    <ul class="flower-list">
+      <li>Basic HTML, CSS</li>
+      <li>Basic AI Concepts</li>
+      <li>Presentation Design</li>
+      <li>Web Browsing & Research (Chrome, Edge)</li>
+    </ul>
+
+    <!--personal or professional interests-->
+    <h2>Interests</h2>
+    <ul class="flower-list">
+      <li>Exploring new technology trends</li>
+      <li>K-pop</li>
+      <li>Trying out new food spots 🍜</li>
+    </ul>
+    <!-- Twice concert image -->
+    <div class="interest-image-container">
+    <img src="twice.jpg" alt="TWICE Concert" />
+  </div>
+  </main>
+
+  <!--footer that appears at the bottom of every page-->
+  <footer>
     <p>&copy; 2025 Kamaljot Wilkhoo. All rights reserved.</p>
-    </footer>
-    </body>
+  </footer>
+</body>
 </html>

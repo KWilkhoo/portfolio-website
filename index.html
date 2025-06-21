@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- meta tags for character encoding and design-->
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale-1"/>
+<head>
+  <!-- meta tags for character encoding and design-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!--Title of the page shown in browser tab-->
-        <title>Home - My Portfolio</title>
+  <!--Title of the page shown in browser tab-->
+  <title>Home - My Portfolio</title>
 
-        <!--Link to external css stylesheet-->
-        <link rel="stylesheet" href="css/style.css"/>
-    </head>
-    <body>
-        <!--Insert navigation bar with links to other pages-->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <!--adding font-->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
-        <!--main header section with welcome message and picture-->
-        <header>
-            <h1>Welcome to My Portfolio</h1>
-            <!--add personal introduction-->
-            <p>Allo! My name is Kamaljot Wilkhoo and I am an Information Technology student at York University. I'm intrigued by large-scale, trending, and high-impact products in the tech world, especially those that solve real problems and improve user experiences.
-                I enjoy learning about cloud computing and emerging technologies. Currently, I'm building my skills through projects and coursework, aiming to contribute to innovative tech solutions in the future.
-            When I'm not into coding, I love exploring new food spots and diving into K-pop culture.  </p>
-            <!--profile picture-->
-            <img src="....YET TO INSERT PIC" alt="My Photo"/>
-        </header>
-        <!--footer that appears at the bottom of every page-->
-        <footer>
-            <p>&copy; 2025 Kamaljot Wilkhoo. All rights reserved.</p>
-        </footer>
-    </body>
+  <!--Link to external css stylesheet-->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--Insert navigation bar with links to other pages-->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- main container with border and layout -->
+  <main>
+    <section class="intro-container">
+      <div class="intro-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          Allo! My name is <strong>Kamaljot Wilkhoo</strong> and I am an Information Technology student at York University. I'm intrigued by large-scale, trending, and high-impact products in the tech world, especially those that solve real problems and improve user experiences.
+        </p>
+      </div>
+      <div class="intro-image">
+        <img src="me.jpg" alt="My Photo" />
+      </div>
+    </section>
+  </main>
+
+  <!--footer that appears at the bottom of every page-->
+  <footer>
+    <p>&copy; 2025 Kamaljot Wilkhoo. All rights reserved.</p>
+  </footer>
+</body>
 </html>
