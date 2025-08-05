@@ -1,0 +1,13 @@
+[
+    {
+      "title": "Implementing Light/Dark Mode Switcher",
+      "date": "2025-08-01",
+      "content": "For Part One, I added a toggle button that switches between light and dark modes using JavaScript. I saved the theme preference in localStorage so the theme stays even if the user refreshes the page or revisits later."
+    },
+    {
+      "title": "Dynamic Blog Section with JSON Posts",
+      "date": "2025-08-02",
+      "content": "In Part Two, I created a JSON file containing blog posts and used JavaScript's fetch API to load and display these posts dynamically on the blog page. This allows easy updating of blog posts without changing the HTML."
+    }
+  ]
+  
