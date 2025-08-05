@@ -187,4 +187,38 @@ html, body {
     display: block;
     border-radius: 15px;
   }
+
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212; /* dark background */
+    color: #ffffff; /* light text */
+  }
+
+  body.dark-mode nav {
+    background-color: #1f1f1f; /* darker nav background */
+  }
+
+  body.dark-mode nav ul li a {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-mode nav ul li a:hover,
+  body.dark-mode nav ul li a.active {
+    background-color: #555;
+  }
+  
+  body.dark-mode footer {
+    color: #aaa;
+  }
+  
+  /* Dark mode for blog, about, and other sections */
+  body.dark-mode .intro-container,
+  body.dark-mode .about-main,
+  body.dark-mode .project,
+  body.dark-mode main {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border-color: #555;
+  }
   
