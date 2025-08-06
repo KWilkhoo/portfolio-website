@@ -109,7 +109,7 @@ nav ul li a.active {
   filter: drop-shadow(1px 3px 4px #ffa1cb);
 }
 
-/* Common page style for everything except Home */
+/* Common page style */
 main:not(.home) {
   background-color: #fff0f6;
   max-width: 700px;
@@ -155,10 +155,22 @@ footer {
   text-align: center;
 }
 
+/* Inserted a wrapper fo image to sit at the side */
+.interests-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .flower-list {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
+  max-width: 320px; 
+  text-align: left;
 }
 
 .flower-list li {
@@ -196,13 +208,13 @@ footer {
 
 .interest-image-container {
   max-width: 150px;
-  margin: 20px auto 40px auto;
   border: 4px solid #ff6fb5;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(255, 111, 181, 0.5);
   overflow: hidden;
   background: #fff0f6;
   text-align: center;
+  flex-shrink: 0; /* to prevent shrinking */
 }
 
 .interest-image-container img {
@@ -286,6 +298,12 @@ body.dark-mode main:not(.home) {
   }
   .intro-image {
     margin-top: 20px;
+  }
+
+  /* About page*/
+  .interests-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
