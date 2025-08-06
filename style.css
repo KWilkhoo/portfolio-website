@@ -12,11 +12,15 @@ html, body {
 nav {
   max-width: 900px; /* match main content width */
   margin: 20px auto 60px auto; /* center horizontally, more space below */
-  padding: 0 20px; /* horizontal padding */
+  padding: 10px 20px; /* added vertical padding for spacing */
   background-color: #ffb6d9; /* nav pink background */
   border-radius: 12px;
   position: relative;
   top: 20px; /* push nav down from top */
+
+  /* Pink bottom border behind nav buttons */
+  border-bottom: 4px solid #ff6fb5; 
+  box-sizing: border-box; /* ensures padding & border don't add to width */
 }
 
 /* Navigation list */
