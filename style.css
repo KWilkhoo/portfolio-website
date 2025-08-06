@@ -2,41 +2,42 @@
 html, body {
   margin: 0;
   padding: 0 20px;
-  overflow-x: hidden;  /* prevent horizontal scroll */
+  overflow-x: hidden;
   font-family: 'Press Start 2P', cursive;
-  background-color: #ffeaf4; /* soft pink background */
-  color: #d6336c; /* dark plum text */
+  background-color: #ffeaf4;
+  color: #d6336c;
 }
 
 /* Navigation container */
 nav {
-  max-width: 900px; /* match main content width */
-  margin: 20px auto 60px auto; /* center horizontally, more space below */
-  padding: 10px 20px; /* added vertical padding for spacing */
-  background-color: #ffb6d9; /* nav pink background */
+  max-width: 900px;
+  margin: 20px auto 60px auto;
+  padding: 10px 20px;
+  background-color: #ffb6d9;
   border-radius: 12px;
   position: relative;
-  top: 20px; /* push nav down from top */
-
-  /* Pink bottom border behind nav buttons */
-  border-bottom: 4px solid #ff6fb5; 
-  box-sizing: border-box; /* ensures padding & border don't add to width */
+  top: 20px;
+  border-bottom: 4px solid #ff6fb5;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Navigation list */
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap; /* ✅ stay on one line */
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 15px;
+  gap: 10px;
   background: none; 
+  width: 100%;
 }
 
 /* Navigation list items */
 nav ul li {
-  margin: 0;
+  flex: 1 1 auto; /* ✅ evenly distribute space */
 }
 
 /* Navigation links */
@@ -44,10 +45,19 @@ nav ul li a {
   color: white;
   text-decoration: none;
   background-color: #ff6fb5;
-  padding: 10px 15px;
+  padding: 10px 0;
   border-radius: 12px;
   font-size: 10px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  width: 100%; /* ✅ takes full li width */
 }
 
 nav ul li a:hover,
@@ -55,18 +65,15 @@ nav ul li a.active {
   background-color: #ec5ca5;
 }
 
-/* Main intro container with border and layout */
-/* Intro container styling for index page */
+/* Main intro container */
 .intro-container {
   max-width: 900px;
   margin: 30px auto 50px auto;
   padding: 30px 40px;
-  border: 4px dotted #d6336c; /* bright pink dotted border */
+  border: 4px dotted #d6336c;
   border-radius: 20px;
-  background-color: #fff0f6; /* very light pink */
-  box-shadow: 0 6px 15px rgba(214, 51, 108, 0.2); /* soft pink glow */
-  
-  /* Flex layout for text and image */
+  background-color: #fff0f6;
+  box-shadow: 0 6px 15px rgba(214, 51, 108, 0.2);
   display: flex;
   gap: 40px;
   align-items: center;
@@ -77,7 +84,7 @@ nav ul li a.active {
   flex: 1 1 400px;
   font-size: 14px;
   line-height: 1.6;
-  color: #5a2a4c; /* match deep pink-purple text */
+  color: #5a2a4c;
 }
 
 .intro-text h1 {
@@ -103,15 +110,24 @@ nav ul li a.active {
 }
 
 /* Responsive */
+@media (max-width: 700px) {
+  nav ul {
+    gap: 5px;
+  }
+  nav ul li a {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 600px) {
   .intro-container {
-      flex-direction: column;
+    flex-direction: column;
   }
   .intro-text {
-      text-align: center;
+    text-align: center;
   }
   .intro-image {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -123,18 +139,17 @@ footer {
   color: #777;
 }
 
-/* New styles for About page main container */
+/* About page */
 .about-main {
-  background-color: #fff0f6; /* very light pink */
+  background-color: #fff0f6;
   max-width: 700px;
   margin: 30px auto;
   padding: 25px 40px;
   border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.2); /* soft pink shadow */
-  color: #5a2a4c; /* deep pink-purple text */
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.2);
+  color: #5a2a4c;
 }
 
-/* Cute flower bullet points */
 .flower-list {
   list-style: none;
   padding-left: 0;
@@ -146,13 +161,13 @@ footer {
   padding-left: 30px;
   margin-bottom: 12px;
   font-size: 13px;
-  color: #a83279; /* medium pink */
+  color: #a83279;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .flower-list li::before {
-  content: "🌸"; /* flower emoji as bullet */
+  content: "🌸";
   position: absolute;
   left: 0;
   top: 0;
@@ -160,14 +175,12 @@ footer {
   line-height: 1;
 }
 
-/* Style headings */
 .about-main h1, .about-main h2 {
-  color: #d6336c; /* bright pink */
-  text-shadow: 0 1px 1px rgba(255, 182, 193, 0.6); /* subtle pink glow */
+  color: #d6336c;
+  text-shadow: 0 1px 1px rgba(255, 182, 193, 0.6);
   margin-bottom: 15px;
 }
 
-/* Paragraph style */
 .about-main p {
   font-size: 14px;
   line-height: 1.5;
@@ -175,7 +188,6 @@ footer {
   font-weight: 500;
 }
 
-/* Interests image styling */
 .interest-image-container {
   max-width: 150px;
   margin: 20px auto 40px auto;
@@ -194,14 +206,14 @@ footer {
   border-radius: 15px;
 }
 
-/* Dark mode styles */
+/* Dark mode */
 body.dark-mode {
-  background-color: #121212; /* dark background */
-  color: #ffffff; /* light text */
+  background-color: #121212;
+  color: #ffffff;
 }
 
 body.dark-mode nav {
-  background-color: #1f1f1f; /* darker nav background */
+  background-color: #1f1f1f;
 }
 
 body.dark-mode nav ul li a {
@@ -218,7 +230,6 @@ body.dark-mode footer {
   color: #aaa;
 }
 
-/* Dark mode for blog, about, and other sections */
 body.dark-mode .intro-container,
 body.dark-mode .about-main,
 body.dark-mode .project,
@@ -230,23 +241,23 @@ body.dark-mode main {
 
 /* Theme toggle button */
 #theme-toggle {
-  position: fixed;      /* so it stays in one spot */
-  top: 40px;           /* moved down from 20px */
-  right: 20px;         
-  background-color: #ff6fb5; /* same color as other nav buttons */
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  background-color: #ff6fb5;
   color: white;
   border: none;
-  border-radius: 50%;   /* to give it circlular shape */
+  border-radius: 50%;
   width: 45px;
   height: 45px;
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000;       
+  z-index: 1000;
 }
 
 #theme-toggle:hover {
   background-color: #ec5ca5;
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
